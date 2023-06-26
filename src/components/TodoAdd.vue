@@ -31,12 +31,15 @@ export default defineComponent({
 		}
 
 		const addTodo = () => {
-			store.commit('addTodo', {
-				id: Date.now(),
-				text: todoText.value,
-				completed: false,
-			})
-			todoText.value = ''
+			const textTrim = todoText.value.trim()
+			if (textTrim) {
+				store.commit('addTodo', {
+					id: Date.now(),
+					text: textTrim,
+					completed: false,
+				})
+				todoText.value = ''
+			}
 		}
 
 		return {

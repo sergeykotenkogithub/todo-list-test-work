@@ -40,8 +40,11 @@ export default defineComponent({
 		}
 
 		const editTodo = (id: number | undefined) => {
-			const text = prompt('Заголовок', props.todo?.text)
-			store.commit('editTodo', { id, text })
+			const text = prompt('Enter text', props.todo?.text)
+			const trimText = text?.trim()
+			if (trimText) {
+				store.commit('editTodo', { id, text })
+			}
 		}
 
 		return {
@@ -54,9 +57,6 @@ export default defineComponent({
 })
 </script>
 <style lang="scss">
-li {
-}
-
 .todo-item-done {
 	text-decoration: line-through;
 	text-decoration-color: red;
@@ -89,16 +89,7 @@ li {
 	height: 30px;
 	stroke: silver;
 	opacity: 0.4;
-}
 
-.trash {
-	&:hover {
-		stroke: black;
-		opacity: 1;
-	}
-}
-
-.edit {
 	&:hover {
 		stroke: black;
 		opacity: 1;
