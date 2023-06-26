@@ -1,7 +1,8 @@
 <template>
 	<div class="wrapper">
 		<h2 class="text">
-			This is a test assignment. In this application is implemented:
+			<span>This is a test assignment.</span>
+			<span>In this application is implemented:</span>
 		</h2>
 		<ul class="list">
 			<li class="item" v-for="li in list" :key="li">- {{ li }}</li>
@@ -35,6 +36,7 @@ export default defineComponent({
 .wrapper {
 	width: 900px;
 	margin: 0 auto;
+	padding-top: 10px;
 	@media (max-width: 970px) {
 		width: 100%;
 	}
@@ -50,5 +52,9 @@ export default defineComponent({
 
 .text {
 	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
 }
 </style>

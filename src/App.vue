@@ -17,13 +17,18 @@
 
 nav {
 	padding: 30px;
+	background: radial-gradient(
+		circle at 10% 20%,
+		rgb(4, 159, 108) 0%,
+		rgb(194, 254, 113) 90.1%
+	);
 
 	a {
 		font-weight: bold;
 		color: #2c3e50;
 
 		&.router-link-exact-active {
-			color: #42b983;
+			color: #2b7a56;
 		}
 	}
 }
