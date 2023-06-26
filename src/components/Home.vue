@@ -35,6 +35,9 @@ export default defineComponent({
 .wrapper {
 	width: 900px;
 	margin: 0 auto;
+	@media (max-width: 970px) {
+		width: 100%;
+	}
 }
 .list {
 	list-style-type: none;

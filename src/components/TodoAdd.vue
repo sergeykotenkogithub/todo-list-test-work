@@ -55,6 +55,9 @@ export default defineComponent({
 	width: 300px;
 	border-radius: 30px;
 	padding: 10px;
+	@media (max-width: 350px) {
+		width: 80%;
+	}
 }
 
 .text-input {

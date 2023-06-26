@@ -75,6 +75,9 @@ li {
 	width: 500px;
 	list-style-type: none;
 	cursor: pointer;
+	@media (max-width: 600px) {
+		width: 80%;
+	}
 }
 
 .text {
